@@ -32,3 +32,6 @@ def user_list_create(request):
             return Response(serializer.errors,status =400)
         else:
               return Response({'detail' : 'you have no access'},status=401)
+        
+
+        

@@ -21,7 +21,7 @@ class Course(models.Model):
     price = models.FloatField()
     duration = models.FloatField()
     is_active = models.BooleanField()
-    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     instructor = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -78,7 +78,7 @@ class QuestionAnswer(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.user.username} -> {self.lesson.title}"
+        return f"{self.user.username} --> {self.lesson.title}"
     
 
 
