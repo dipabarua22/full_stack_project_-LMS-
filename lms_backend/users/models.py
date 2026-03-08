@@ -13,3 +13,6 @@ USER_ROLES = (
 class User(AbstractUser):  # Abstract base class
     role = models.CharField(max_length=100, choices=USER_ROLES)
     mobile_no = models.CharField(max_length=12)
+
+    def __str__(self):
+        return f"{self.Id} : {self.username} - {self.role}"

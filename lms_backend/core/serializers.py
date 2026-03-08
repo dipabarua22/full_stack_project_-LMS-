@@ -24,7 +24,7 @@ class MaterialSerializer(serializers.ModelSerializer):
 class EnrollmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Enrollment
-        fields = '__all__'
+        fields = ['student','course']
 
 class QuestionAnswerSerializer(serializers.ModelSerializer):
     class Meta:
